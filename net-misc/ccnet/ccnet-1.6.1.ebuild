@@ -3,6 +3,9 @@
 # $Header: $
 
 EAPI=5
+PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python2 )
+RESTRICT_PYTHON_ABIS="3.*"
 inherit eutils python
 
 DESCRIPTION="Ccnet is a framework for writing networked applications in C."
@@ -15,11 +18,11 @@ KEYWORDS="x86 amd64"
 
 IUSE=""
 
-RDEPEND=">=dev-libs/libevent-2.0
+RDEPEND="${PYTHON_DEPS}
+		>=dev-libs/libevent-2.0
 		>=dev-db/sqlite-3.7
 		=net-misc/libsearpc-1.6.1"
 DEPEND="${RDEPEND}
-		dev-lang/vala
 		>=dev-util/intltool-0.40"
 
 S=${WORKDIR}/seafile-1.6.1/ccnet
