@@ -34,3 +34,7 @@ src_configure() {
 src_prepare() {
 	python_convert_shebangs -r 2 .
 }
+
+src_configure() {
+	MAKEOPTS="-j1" econf
+}

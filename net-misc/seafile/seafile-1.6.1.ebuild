@@ -39,7 +39,7 @@ src_prepare() {
 }
 
 src_configure() {
-	PYTHON="/usr/bin/python2" econf $(use_enable X gui)
+	PYTHON="$(PYTHON)" econf $(use_enable X gui)
 }
 
 src_compile() {
