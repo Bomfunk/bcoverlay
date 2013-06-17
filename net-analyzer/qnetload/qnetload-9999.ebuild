@@ -23,5 +23,10 @@ RDEPEND="${DEPEND}"
 #S=${WORKDIR}/${P}
 
 src_compile() {
-	(qmake && emake) || die
+	(qmake && emake) || die "Compilation failed."
+}
+
+src_install() {
+	mkdir -p ${D}/usr/bin
+	cp ${S}/qnetload ${D}/usr/bin/ || die "Installation failed."
 }
