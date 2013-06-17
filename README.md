@@ -5,8 +5,8 @@ Bomfunk's portage overlay for Gentoo.
 
 Currently the overlay contains:
 
-- net-analyzer/qnetload (has a dirty hack install method inside since the function is not implemented by creator yet)
+- net-analyzer/[qnetload](http://bitcheese.net/wiki/code/qnetload)
 
 Coming soon:
 
-- net-misc/seafile
+- net-misc/[seafile](http://seafile.com/)
