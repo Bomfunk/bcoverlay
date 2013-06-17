@@ -16,7 +16,7 @@ KEYWORDS="x86 amd64"
 IUSE="gui"
 
 RDEPEND="gui? ( x11-libs/libnotify
-		>=x11-libs/gtk+-2.24 )
+		>=x11-libs/gtk+-2.24:2 )
 		>=dev-libs/openssl-1.0
 		dev-python/webpy
 		dev-python/simplejson
@@ -26,11 +26,6 @@ DEPEND="${RDEPEND}
 		sys-kernel/linux-headers"
 
 #S=${WORKDIR}/${S}
-
-#pkg_setup() {
-#	python_set_active_version 2
-#	python_pkg_setup
-#}
 
 src_configure() {
 	econf $(use_enable gui)
