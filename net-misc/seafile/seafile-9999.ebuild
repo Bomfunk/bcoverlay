@@ -3,15 +3,15 @@
 # $Header: $
 
 EAPI=5
-inherit eutils python
+inherit eutils python git-2
 
 DESCRIPTION="A file syncing and collaboration platform for teams."
 HOMEPAGE="http://seafile.com/"
-SRC_URI="https://seafile.googlecode.com/files/seafile-1.6.1.tar.gz"
+EGIT_REPO_URI="https://github.com/haiwen/seafile.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64"
 
 IUSE="gui"
 
@@ -21,7 +21,7 @@ RDEPEND="gui? ( x11-libs/libnotify
 		dev-python/webpy
 		dev-python/simplejson
 		dev-python/mako
-		=net-misc/ccnet-1.6.1"
+		=net-misc/ccnet-9999"
 DEPEND="${RDEPEND}
 		sys-kernel/linux-headers"
 

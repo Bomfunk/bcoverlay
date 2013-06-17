@@ -4,14 +4,11 @@
 
 EAPI=5
 
-inherit eutils
-inherit qt4-r2
-inherit git-2
+inherit eutils qt4-r2 git-2
 
 DESCRIPTION="Advanced network monitor for system tray"
 HOMEPAGE="http://bitcheese.net/wiki/code/qnetload"
 EGIT_REPO_URI="git://git.bitcheese.net/qnetload"
-#SRC_URI=""
 LICENSE="GPL-3"
 SLOT="0"
 
@@ -22,8 +19,6 @@ DEPEND="dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
 
 DOCS="COPYING README"
-
-#S=${WORKDIR}/${P}
 
 src_configure() {
 	eqmake4 PREFIX="/usr"
