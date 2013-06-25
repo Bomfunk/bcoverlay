@@ -21,7 +21,7 @@ IUSE=""
 RDEPEND="${PYTHON_DEPS}
 		>=dev-libs/libevent-2.0
 		>=dev-db/sqlite-3.7
-		=net-misc/libsearpc-1.6.1"
+		=net-misc/libsearpc-1.7.1"
 DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.40"
 

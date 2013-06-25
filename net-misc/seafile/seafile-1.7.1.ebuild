@@ -25,7 +25,7 @@ RDEPEND="${PYTHON_DEPS}
 		dev-python/webpy
 		dev-python/simplejson
 		dev-python/mako
-		=net-misc/ccnet-1.6.1"
+		=net-misc/ccnet-1.7.1"
 DEPEND="${RDEPEND}
 		sys-kernel/linux-headers"
 
