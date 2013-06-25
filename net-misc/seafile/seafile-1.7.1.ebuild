@@ -10,7 +10,7 @@ inherit eutils python
 
 DESCRIPTION="A file syncing and collaboration platform for teams."
 HOMEPAGE="http://seafile.com/"
-SRC_URI="https://seafile.googlecode.com/files/seafile-1.6.1.tar.gz"
+SRC_URI="https://seafile.googlecode.com/files/seafile-1.7.1.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"

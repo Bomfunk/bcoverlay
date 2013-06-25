@@ -10,7 +10,7 @@ inherit eutils python
 
 DESCRIPTION="Ccnet is a framework for writing networked applications in C."
 HOMEPAGE="https://github.com/haiwen/ccnet"
-SRC_URI="https://seafile.googlecode.com/files/seafile-1.6.1.tar.gz"
+SRC_URI="https://seafile.googlecode.com/files/seafile-1.7.1.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -25,7 +25,7 @@ RDEPEND="${PYTHON_DEPS}
 DEPEND="${RDEPEND}
 		>=dev-util/intltool-0.40"
 
-S=${WORKDIR}/seafile-1.6.1/ccnet
+S=${WORKDIR}/seafile-1.7.1/ccnet
 
 pkg_setup() {
 	python_set_active_version 2

@@ -10,7 +10,7 @@ inherit eutils python
 
 DESCRIPTION="A simple and easy-to-use C language RPC framework (including both server side & client side) based on GObject System. Python binding is also provided"
 HOMEPAGE="https://github.com/haiwen/libsearpc"
-SRC_URI="https://seafile.googlecode.com/files/seafile-1.6.1.tar.gz"
+SRC_URI="https://seafile.googlecode.com/files/seafile-1.7.1.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -21,7 +21,7 @@ IUSE=""
 DEPEND="${PYTHON_DEPS}"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/seafile-1.6.1/libsearpc
+S=${WORKDIR}/seafile-1.7.1/libsearpc
 
 pkg_setup() {
 	python_set_active_version 2
