@@ -10,7 +10,7 @@ inherit eutils python
 
 DESCRIPTION="A file syncing and collaboration platform for teams."
 HOMEPAGE="http://seafile.com/"
-SRC_URI="https://seafile.googlecode.com/files/seafile-1.7.1.tar.gz"
+SRC_URI="https://seafile.googlecode.com/files/seafile-1.7.1.1.tar.gz http://dump.bitcheese.net/files/ufoxama/seafile-1.7.1.1.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -25,7 +25,7 @@ RDEPEND="${PYTHON_DEPS}
 		dev-python/webpy
 		dev-python/simplejson
 		dev-python/mako
-		=net-misc/ccnet-1.7.1"
+		=net-misc/ccnet-1.7.1.1"
 DEPEND="${RDEPEND}
 		sys-kernel/linux-headers"
 
