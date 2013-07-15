@@ -16,15 +16,14 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
 
-IUSE="vala"
-REQUIRED_USE="vala"
+IUSE=""
 
 RDEPEND="${PYTHON_DEPS}
 		>=dev-libs/libevent-2.0
 		>=dev-db/sqlite-3.7
 		=net-misc/libsearpc-9999"
 DEPEND="${RDEPEND}
-		vala? ( dev-lang/vala )
+		dev-lang/vala
 		>=dev-util/intltool-0.40"
 
 pkg_setup() {
@@ -33,7 +32,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	use vala && vala_src_prepare
+	vala_src_prepare
 	sed -e 's/valac/$(VALAC)/g' -i ./lib/Makefile.am
 }
 
