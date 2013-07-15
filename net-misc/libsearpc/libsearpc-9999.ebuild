@@ -26,8 +26,9 @@ src_prepare() {
 }
 
 src_configure() {
+	MAKEOPTS="-j1"
 	./autogen.sh
-	MAKEOPTS="-j1" econf
+	econf
 }
 
 pkg_setup() {
