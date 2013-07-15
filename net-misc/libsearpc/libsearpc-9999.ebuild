@@ -21,20 +21,16 @@ IUSE=""
 DEPEND=""
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_configure() {
-	./autogen.sh
-	econf
-}
-
 src_prepare() {
 	python_convert_shebangs -r 2 .
 }
 
 src_configure() {
+	./autogen.sh
 	MAKEOPTS="-j1" econf
+}
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
 }

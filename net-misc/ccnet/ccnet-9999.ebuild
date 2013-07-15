@@ -6,7 +6,7 @@ EAPI=5
 PYTHON_DEPEND="2"
 PYTHON_COMPAT=( python2 )
 RESTRICT_PYTHON_ABIS="3.*"
-inherit eutils python git-2
+inherit eutils python git-2 vala
 
 DESCRIPTION="Ccnet is a framework for writing networked applications in C."
 HOMEPAGE="https://github.com/haiwen/ccnet"
@@ -16,19 +16,25 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
 
-IUSE=""
+IUSE="vala"
+REQUIRED_USE="vala"
 
 RDEPEND="${PYTHON_DEPS}
 		>=dev-libs/libevent-2.0
 		>=dev-db/sqlite-3.7
 		=net-misc/libsearpc-9999"
 DEPEND="${RDEPEND}
-		dev-lang/vala
+		vala? ( dev-lang/vala )
 		>=dev-util/intltool-0.40"
 
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	use vala && vala_src_prepare
+	sed -e 's/valac/$(VALAC)/g' -i ./lib/Makefile.am
 }
 
 src_configure() {

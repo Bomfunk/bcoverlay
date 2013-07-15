@@ -6,7 +6,7 @@ EAPI=5
 PYTHON_DEPEND="2"
 PYTHON_COMPAT=( python2 )
 RESTRICT_PYTHON_ABIS="3.*"
-inherit eutils python git-2
+inherit eutils python git-2 vala
 
 DESCRIPTION="A file syncing and collaboration platform for teams."
 HOMEPAGE="http://seafile.com/"
@@ -16,7 +16,8 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
 
-IUSE="X"
+IUSE="X vala"
+REQUIRED_USE="vala"
 
 RDEPEND="X? ( x11-libs/libnotify
 		>=x11-libs/gtk+-2.24:2 )
@@ -26,6 +27,7 @@ RDEPEND="X? ( x11-libs/libnotify
 		dev-python/mako
 		=net-misc/ccnet-9999"
 DEPEND="${RDEPEND}
+		vala? ( dev-lang/vala )
 		sys-kernel/linux-headers"
 
 pkg_setup() {
@@ -35,6 +37,8 @@ pkg_setup() {
 
 src_prepare() {
 	python_convert_shebangs -r 2 .
+	use vala && vala_src_prepare
+	sed -e 's/valac/$(VALAC)/g' -i ./lib/Makefile.am
 }
 
 src_configure() {
