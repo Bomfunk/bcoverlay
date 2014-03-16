@@ -43,6 +43,5 @@ src_configure() {
 }
 
 src_compile() {
-#	MAKEOPTS="-j1" emake
-	emake
+	MAKEOPTS="-j1" emake
 }
