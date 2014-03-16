@@ -14,7 +14,7 @@ SRC_URI="https://seafile.googlecode.com/files/seafile-client-2.0.6.tar.gz http:/
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 IUSE=""
 

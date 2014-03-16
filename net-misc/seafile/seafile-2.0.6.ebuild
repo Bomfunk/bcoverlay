@@ -14,7 +14,7 @@ SRC_URI="https://seafile.googlecode.com/files/seafile-client-2.0.6.tar.gz http:/
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 
 IUSE="X"
 
@@ -43,5 +43,6 @@ src_configure() {
 }
 
 src_compile() {
-	MAKEOPTS="-j1" emake
+#	MAKEOPTS="-j1" emake
+	emake
 }
