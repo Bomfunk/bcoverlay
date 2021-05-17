@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>bcoverlay</name>
+		<description>Bomfunk's overlay for Gentoo.</description>
+		<homepage>https://github.com/Bomfunk/bcoverlay</homepage>
+		<owner>
+			<email>mrbomfunk@gmail.com</email>
+		</owner>
+		<source type="git">https://github.com/Bomfunk/bcoverlay.git</source>
+	</repo>
+</repositories>
