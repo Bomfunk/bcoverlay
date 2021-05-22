@@ -6,7 +6,7 @@ EAPI=7
 DESCRIPTION="Simple bash script to suspend the system based on the output of acpi.
 Assumes systemctl suspend."
 HOMEPAGE="https://github.com/NickHu/low_battery_suspend"
-SRC_URI="https://github.com/NickHu/low_battery_suspend/archive/refs/tags/1.1.zip"
+SRC_URI="https://github.com/NickHu/low_battery_suspend/archive/refs/tags/${PV}.zip"
 
 LICENSE="MIT"
 SLOT="0"
